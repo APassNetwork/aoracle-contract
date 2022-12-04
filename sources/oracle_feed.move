@@ -50,10 +50,6 @@ module AOracle::oracle_feed {
 			signer_cap
 		});
 	}
-
-	fun admin_address(): address {
-		@AOracle
-	}
 	
 	// Parse Feed Packet to Object
 	fun parse_feed(_data: &vector<u8>): Feed{
