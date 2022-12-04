@@ -1,0 +1,12 @@
+[package]
+name = "AOracle"
+version = "0.0.4"
+upgrade_policy = "compatible"
+
+[addresses]
+AOracle = "_"
+
+[dependencies]
+AptosFramework = { local = "../../aptos-core-main/aptos-move/framework/aptos-framework" }
+AptosStdlib = { local = "../../aptos-core-main/aptos-move/framework/aptos-stdlib" }
+AptosToken = { local = "../../aptos-core-main/aptos-move/framework/aptos-token" }
