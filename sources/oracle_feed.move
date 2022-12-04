@@ -2,7 +2,6 @@
 // This module is used to parse the feed package, check the validity, and submit answers in batches
 //
 module AOracle::oracle_feed {
-//	use std::signer;
 	use std::vector;
 	use std::error;
 	use std::string::String;
@@ -16,9 +15,9 @@ module AOracle::oracle_feed {
 	//
 	// Errors
 	//
-	const ENO_NOT_ADMIN			: u64 = 1;
+	const ENO_NOT_ADMIN		: u64 = 1;
 	const ENO_INVAILD_TICKET	: u64 = 500;
-	const ENO_TIMEOUT			: u64 = 501;
+	const ENO_TIMEOUT		: u64 = 501;
 	//
 	
 	// The maximum time offset allowed by the feed package
