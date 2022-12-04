@@ -113,12 +113,6 @@ module AOracle::oracle {
 	public entry fun create_oracle(account: signer, name: String, decimals:u8) acquires OracleTable {
 		assert!( admin_address()==signer::address_of(&account), error::permission_denied(ENO_NOT_ADMIN));
 		
-		if( !exists<OracleTable>(signer::address_of(&account)) ){	
-			move_to(&account, OracleTable {
-				oracles: table::new<String,Oracle>()
-			});
-		};
-
 		create_oracle_with_name(name, decimals);
 	}
 
